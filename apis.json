@@ -1,0 +1,75 @@
+{
+    "name": "PredictHQ",
+    "description": "Event visibility yields higher returns & reduces operational costs. PredictHQ is the world's largest source of intelligent event data making businesses smarter.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28211-predicthq.jpg",
+    "tags": [
+        "api provider",
+        "have api",
+        "relative data",
+        "service api",
+        "streams"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/predicthq\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "PredictHQ API",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28211-predicthq.jpg",
+            "humanURL": "http:\/\/www.predicthq.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/predicthq-api.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/predicthq-api-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Website",
+            "url": "http:\/\/www.predicthq.com\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/predicthq"
+        },
+        {
+            "type": "Email",
+            "url": "support@predicthq.com"
+        },
+        {
+            "type": "Email",
+            "url": "8Bsupport@predicthq.com"
+        },
+        {
+            "type": "Email",
+            "url": "notices@predicthq.com"
+        },
+        {
+            "type": "GIthub",
+            "url": "https:\/\/github.com\/predicthq"
+        },
+        {
+            "type": "LinkedIn",
+            "url": "PredictHQ"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/PredictHQ"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/developer.predicthq.com"
+        }
+    ]
+}
