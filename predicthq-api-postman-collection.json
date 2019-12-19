@@ -1,0 +1,479 @@
+{
+    "id": "9408e5e0ccede063fb02571d02284ac1",
+    "name": "PredictHQ API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "fc293f89afc9f93e3cfb6c04d32bff86",
+            "name": "Retrieve Analysis",
+            "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/analysis\/",
+            "description": "This action returns a complete analysis of your Signal, which includes what your actual figures were, what could be expected, and what was in excess in terms of **demand**, **lead time** and **duration** and can be explained using events. Note that lead time (`lead`) and duration (`span`) analysis are only available when an `initiated` and `completed` dates are provided with data points, respectively.\n\nTo retrieve a list of events that we estimate impacted your business at a specific date in the",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signal_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "4a792be688617b2aba43a188fabf4b22",
+            "name": "Retrieve A Signal",
+            "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/",
+            "description": "This action returns a Signal according to the unique identifier you provide.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signal_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "d1b383e0cf77fa1e367e866450e7f591",
+            "name": "Update a Signal",
+            "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/",
+            "description": "This action modifies a Signal according to the unique identifier you provide.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signal_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "f6c67c0ad9ebf8646d5f08df8dc4a005",
+            "name": "Delete A Signal",
+            "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/",
+            "description": "This action will delete a Signal altogether along with the Data Points associated with it, according to the unique identifier you provide.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signal_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "ff2dd7f5173282fa6216b3c1ec173232",
+            "name": "Search Places",
+            "url": "httpsapi.predicthq.com\/\/v1\/places\/",
+            "description": "Use the below parameters to search and filter all places. Places are sorted by relevance (location or text query proximity).\n\nA search requires at least one of the `q`, `id`, `country` or `location` parameters.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "4c7dbceec2ade9b896cb3d6491024407",
+            "name": "Create Data Points",
+            "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/sink\/",
+            "description": "Every Signal needs a series of Data Points for the API to do its job.\n\nUnlike the other endpoints, the Data Point sink accepts three content types for uploading your data:\n- `application\/json`: A JSON array of Data Points.\n- `application\/x-ldjson`: A list of JSON Data Points, one on each line.\n- `text\/csv`: A list of Data Points with each column comma-separated, and column names on the first row.\n\nAs a rule of thumb, you should limit the number of records you upload with any single request to 1,",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signal_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "fc552f5689955d258082e713e54f9a19",
+            "name": "Revoking an Access Token",
+            "url": "httpsapi.predicthq.com\/\/oauth2\/revoke\/",
+            "description": "Access Tokens never expire so once you have it, it's yours for the life of your PredictHQ API subscription.\n\nHowever, if you think your token may have been compromised, you have the power to revoke it at any time.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "token_type_hint",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "token",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "0e3c7167135c44262d418999886c3027",
+            "name": "Retrieve Account Details",
+            "url": "httpsapi.predicthq.com\/\/v1\/accounts\/self\/",
+            "description": "If you need your account details for whatever reason, it's really easy to get them.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "3939ce26002728b6eb77faffde419d13",
+            "name": "Retrieve All Signals",
+            "url": "httpsapi.predicthq.com\/\/v1\/signals\/",
+            "description": "It's easy to get a list of all Signals that are associated with your account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "04931df3bba353ac4439450b4f6bea56",
+            "name": "Create a Signal",
+            "url": "httpsapi.predicthq.com\/\/v1\/signals\/",
+            "description": "Before you do anything else, you need to create a new Signal that represents a time series that's important to your business.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Body",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Content",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "9c76bed4d0ec45e352c314f9e1b4bbf7",
+            "name": "Retrieve Events Calendar",
+            "url": "httpsapi.predicthq.com\/\/v1\/events\/calendar\/",
+            "description": "This endpoint accepts the same parameters as the ones described in Retrieve All Events and can be used to get a calendar view of all matching events that are available to your account.\n\nEach day in the calendar contains aggregate counts of all _active_ events for that day.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "aee247b3b68c4b89a55afe7f5d1b9945",
+            "name": "Retrieve Events Count",
+            "url": "httpsapi.predicthq.com\/\/v1\/events\/count\/",
+            "description": "This endpoint accepts the same parameters as the ones described in Retrieve All Events and can be used to get aggregated counts of all matching events that are available to your account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "7eb83b5a96fca7f1da7e76a7cbeff13b",
+            "name": "Retrieve All Events",
+            "url": "httpsapi.predicthq.com\/\/v1\/events\/",
+            "description": "Use the below parameters to search and filter all events that are available to your account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "1c47436d84f90fd1fee8dc3e9e33c5a6",
+            "name": "Requesting an Access Token",
+            "url": "httpsapi.predicthq.com\/\/oauth2\/token\/",
+            "description": "When requesting an Access Token, use the `client_credentials` grant type, then request the scope or scopes you wish to have access to.\n\nThese scopes can be any or all of the following, separated by a space:\n  - `account` Grants access to the account endpoint.\n  - `events` Grants access to the events endpoint.\n  - `places` Grants access to the places endpoint.\n  - `signals` Grants access to the signals endpoint.\n\nPlease note that Access Tokens requested via the client_credentials grant type never",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "grant_type",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "scope",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        },
+        {
+            "id": "5ad83cf054fcdf6c192ce44b5022cae2",
+            "name": "Retrieve All Dimensions",
+            "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/dimensions\/",
+            "description": "This action returns a summary for each dimension of your Signal.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signal_id",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "rawModeData": ""
+        }
+    ]
+}
