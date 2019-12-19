@@ -1,0 +1,312 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "PredictHQ API",
+        "description": "TODO: Add Description",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.predicthq.com\/"
+    ],
+    "paths": {
+        "\/v1\/signals\/{signal_id}\/analysis\/": {
+            "get": {
+                "summary": "Retrieve Analysis",
+                "description": "This action returns a complete analysis of your Signal, which includes what your actual figures were, what could be expected, and what was in excess in terms of **demand**, **lead time** and **duration** and can be explained using events. Note that lead time (`lead`) and duration (`span`) analysis are only available when an `initiated` and `completed` dates are provided with data points, respectively.\n\nTo retrieve a list of events that we estimate impacted your business at a specific date in the",
+                "operationId": "V1SignalsAnalysisBySignalIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signal_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/signals\/{signal_id}\/": {
+            "get": {
+                "summary": "Retrieve A Signal",
+                "description": "This action returns a Signal according to the unique identifier you provide.",
+                "operationId": "V1SignalsBySignalIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signal_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update a Signal",
+                "description": "This action modifies a Signal according to the unique identifier you provide.",
+                "operationId": "V1SignalsBySignalIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signal_id",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete A Signal",
+                "description": "This action will delete a Signal altogether along with the Data Points associated with it, according to the unique identifier you provide.",
+                "operationId": "V1SignalsBySignalIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signal_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/places\/": {
+            "get": {
+                "summary": "Search Places",
+                "description": "Use the below parameters to search and filter all places. Places are sorted by relevance (location or text query proximity).\n\nA search requires at least one of the `q`, `id`, `country` or `location` parameters.\n",
+                "operationId": "V1PlacesGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/v1\/signals\/{signal_id}\/sink\/": {
+            "post": {
+                "summary": "Create Data Points",
+                "description": "Every Signal needs a series of Data Points for the API to do its job.\n\nUnlike the other endpoints, the Data Point sink accepts three content types for uploading your data:\n- `application\/json`: A JSON array of Data Points.\n- `application\/x-ldjson`: A list of JSON Data Points, one on each line.\n- `text\/csv`: A list of Data Points with each column comma-separated, and column names on the first row.\n\nAs a rule of thumb, you should limit the number of records you upload with any single request to 1,",
+                "operationId": "V1SignalsSinkBySignalIdPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signal_id",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/oauth2\/revoke\/": {
+            "post": {
+                "summary": "Revoking an Access Token",
+                "description": "Access Tokens never expire so once you have it, it's yours for the life of your PredictHQ API subscription.\n\nHowever, if you think your token may have been compromised, you have the power to revoke it at any time.\n",
+                "operationId": "Oauth2RevokePost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "token_type_hint",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "token",
+                        "in": "formData",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/accounts\/self\/": {
+            "get": {
+                "summary": "Retrieve Account Details",
+                "description": "If you need your account details for whatever reason, it's really easy to get them.",
+                "operationId": "V1AccountsSelfGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/v1\/signals\/": {
+            "get": {
+                "summary": "Retrieve All Signals",
+                "description": "It's easy to get a list of all Signals that are associated with your account.",
+                "operationId": "V1SignalsGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create a Signal",
+                "description": "Before you do anything else, you need to create a new Signal that represents a time series that's important to your business.",
+                "operationId": "V1SignalsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/events\/calendar\/": {
+            "get": {
+                "summary": "Retrieve Events Calendar",
+                "description": "This endpoint accepts the same parameters as the ones described in Retrieve All Events and can be used to get a calendar view of all matching events that are available to your account.\n\nEach day in the calendar contains aggregate counts of all _active_ events for that day.\n",
+                "operationId": "V1EventsCalendarGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/v1\/events\/count\/": {
+            "get": {
+                "summary": "Retrieve Events Count",
+                "description": "This endpoint accepts the same parameters as the ones described in Retrieve All Events and can be used to get aggregated counts of all matching events that are available to your account.",
+                "operationId": "V1EventsCountGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/v1\/events\/": {
+            "get": {
+                "summary": "Retrieve All Events",
+                "description": "Use the below parameters to search and filter all events that are available to your account.",
+                "operationId": "V1EventsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/oauth2\/token\/": {
+            "post": {
+                "summary": "Requesting an Access Token",
+                "description": "When requesting an Access Token, use the `client_credentials` grant type, then request the scope or scopes you wish to have access to.\n\nThese scopes can be any or all of the following, separated by a space:\n  - `account` Grants access to the account endpoint.\n  - `events` Grants access to the events endpoint.\n  - `places` Grants access to the places endpoint.\n  - `signals` Grants access to the signals endpoint.\n\nPlease note that Access Tokens requested via the client_credentials grant type never",
+                "operationId": "Oauth2TokenPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "grant_type",
+                        "in": "formData",
+                        "description": ""
+                    },
+                    {
+                        "name": "scope",
+                        "in": "formData",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/v1\/signals\/{signal_id}\/dimensions\/": {
+            "get": {
+                "summary": "Retrieve All Dimensions",
+                "description": "This action returns a summary for each dimension of your Signal.\n",
+                "operationId": "V1SignalsDimensionsBySignalIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signal_id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CreateDataPointsrequest": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "latitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "longitude": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "initiated": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "completed": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UpdateASignalrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "country": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "dimensions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Dimension": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateASignalrequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "country": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "dimensions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
