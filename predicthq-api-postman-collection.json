@@ -1,5 +1,5 @@
 {
-    "id": "9408e5e0ccede063fb02571d02284ac1",
+    "id": "717f2196856c6eb95a1e44136a245221",
     "name": "PredictHQ API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "fc293f89afc9f93e3cfb6c04d32bff86",
+            "id": "a813b12a1517f0a99601ad02f0410569",
             "name": "Retrieve Analysis",
             "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/analysis\/",
             "description": "This action returns a complete analysis of your Signal, which includes what your actual figures were, what could be expected, and what was in excess in terms of **demand**, **lead time** and **duration** and can be explained using events. Note that lead time (`lead`) and duration (`span`) analysis are only available when an `initiated` and `completed` dates are provided with data points, respectively.\n\nTo retrieve a list of events that we estimate impacted your business at a specific date in the",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "4a792be688617b2aba43a188fabf4b22",
+            "id": "5efb305b8bfe8721d08cb924c3bae18a",
             "name": "Retrieve A Signal",
             "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/",
             "description": "This action returns a Signal according to the unique identifier you provide.",
@@ -68,11 +68,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "d1b383e0cf77fa1e367e866450e7f591",
+            "id": "fc41badf2f7580d128445e3db8a44480",
             "name": "Update a Signal",
             "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/",
             "description": "This action modifies a Signal according to the unique identifier you provide.",
@@ -113,11 +113,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "f6c67c0ad9ebf8646d5f08df8dc4a005",
+            "id": "4e77db912fc0a9278d33121bb3c81c8c",
             "name": "Delete A Signal",
             "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/",
             "description": "This action will delete a Signal altogether along with the Data Points associated with it, according to the unique identifier you provide.",
@@ -144,11 +144,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "ff2dd7f5173282fa6216b3c1ec173232",
+            "id": "3a6288d5beb96a58beb6e3d9508b6c7b",
             "name": "Search Places",
             "url": "httpsapi.predicthq.com\/\/v1\/places\/",
             "description": "Use the below parameters to search and filter all places. Places are sorted by relevance (location or text query proximity).\n\nA search requires at least one of the `q`, `id`, `country` or `location` parameters.\n",
@@ -167,11 +167,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "4c7dbceec2ade9b896cb3d6491024407",
+            "id": "74e8e47ccf960aba5c256e101ae0cb22",
             "name": "Create Data Points",
             "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/sink\/",
             "description": "Every Signal needs a series of Data Points for the API to do its job.\n\nUnlike the other endpoints, the Data Point sink accepts three content types for uploading your data:\n- `application\/json`: A JSON array of Data Points.\n- `application\/x-ldjson`: A list of JSON Data Points, one on each line.\n- `text\/csv`: A list of Data Points with each column comma-separated, and column names on the first row.\n\nAs a rule of thumb, you should limit the number of records you upload with any single request to 1,",
@@ -212,11 +212,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "fc552f5689955d258082e713e54f9a19",
+            "id": "7a6bca19b9d9205e49e04864e8496dd9",
             "name": "Revoking an Access Token",
             "url": "httpsapi.predicthq.com\/\/oauth2\/revoke\/",
             "description": "Access Tokens never expire so once you have it, it's yours for the life of your PredictHQ API subscription.\n\nHowever, if you think your token may have been compromised, you have the power to revoke it at any time.\n",
@@ -250,11 +250,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "0e3c7167135c44262d418999886c3027",
+            "id": "26d49db57b1a65343b6b5aaf3d31955f",
             "name": "Retrieve Account Details",
             "url": "httpsapi.predicthq.com\/\/v1\/accounts\/self\/",
             "description": "If you need your account details for whatever reason, it's really easy to get them.",
@@ -273,11 +273,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "3939ce26002728b6eb77faffde419d13",
+            "id": "cd8fd20490aa3bd5710098f3a7abcfe0",
             "name": "Retrieve All Signals",
             "url": "httpsapi.predicthq.com\/\/v1\/signals\/",
             "description": "It's easy to get a list of all Signals that are associated with your account.",
@@ -296,11 +296,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "04931df3bba353ac4439450b4f6bea56",
+            "id": "efce84566781e15fddb00a2d21792402",
             "name": "Create a Signal",
             "url": "httpsapi.predicthq.com\/\/v1\/signals\/",
             "description": "Before you do anything else, you need to create a new Signal that represents a time series that's important to your business.",
@@ -334,11 +334,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "9c76bed4d0ec45e352c314f9e1b4bbf7",
+            "id": "538ccfcb411817f0d5981075af4ecd42",
             "name": "Retrieve Events Calendar",
             "url": "httpsapi.predicthq.com\/\/v1\/events\/calendar\/",
             "description": "This endpoint accepts the same parameters as the ones described in Retrieve All Events and can be used to get a calendar view of all matching events that are available to your account.\n\nEach day in the calendar contains aggregate counts of all _active_ events for that day.\n",
@@ -357,11 +357,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "aee247b3b68c4b89a55afe7f5d1b9945",
+            "id": "2ef1b636366576a1d6aa2e678d208de4",
             "name": "Retrieve Events Count",
             "url": "httpsapi.predicthq.com\/\/v1\/events\/count\/",
             "description": "This endpoint accepts the same parameters as the ones described in Retrieve All Events and can be used to get aggregated counts of all matching events that are available to your account.",
@@ -380,11 +380,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "7eb83b5a96fca7f1da7e76a7cbeff13b",
+            "id": "d186288914b366b1ea54c896257d9698",
             "name": "Retrieve All Events",
             "url": "httpsapi.predicthq.com\/\/v1\/events\/",
             "description": "Use the below parameters to search and filter all events that are available to your account.",
@@ -403,11 +403,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "1c47436d84f90fd1fee8dc3e9e33c5a6",
+            "id": "392e7b1b18e9d427c291abb63122198d",
             "name": "Requesting an Access Token",
             "url": "httpsapi.predicthq.com\/\/oauth2\/token\/",
             "description": "When requesting an Access Token, use the `client_credentials` grant type, then request the scope or scopes you wish to have access to.\n\nThese scopes can be any or all of the following, separated by a space:\n  - `account` Grants access to the account endpoint.\n  - `events` Grants access to the events endpoint.\n  - `places` Grants access to the places endpoint.\n  - `signals` Grants access to the signals endpoint.\n\nPlease note that Access Tokens requested via the client_credentials grant type never",
@@ -441,11 +441,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         },
         {
-            "id": "5ad83cf054fcdf6c192ce44b5022cae2",
+            "id": "3d4070615c5f38e32d425b51b99797e8",
             "name": "Retrieve All Dimensions",
             "url": "httpsapi.predicthq.com\/\/v1\/signals\/{signal_id}\/dimensions\/",
             "description": "This action returns a summary for each dimension of your Signal.\n",
@@ -472,7 +472,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "9408e5e0ccede063fb02571d02284ac1",
+            "collectionId": "717f2196856c6eb95a1e44136a245221",
             "rawModeData": ""
         }
     ]
